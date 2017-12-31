@@ -1,6 +1,6 @@
 # accelerated-mobile-pages
 
-This folder contains the source codelab.
+This folder contains an example of how to convert from HTML to AMP.
 
 ### License
 
