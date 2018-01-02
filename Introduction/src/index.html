@@ -1,34 +1,208 @@
 <!--
 Standard for HTML.
 Start with the <!doctype html> doctype.
---><!doctype html><!--
+-->
+<!doctype html>
+<!--
 Identifies the page as AMP content.
 Contain a top-level <html ⚡> tag
 (<html amp> is accepted as well).
---><html ⚡><!--
+-->
+<html ⚡>
+<!--
 Optional in HTML but not in AMP.
 Contain <head> and <body> tags.
---><head><!--
+-->
+<head>
+    <!--
     Identifies the encoding for the page.
     Contain a <meta charset="utf-8"> tag as the first child of their <head> tag.
-    --><meta charset="utf-8"><!--
+    -->
+    <meta charset="utf-8">
+    <!--
     Includes and loads the AMP JS library.
     Contain a <script async src="https://cdn.ampproject.org/v0.js"></script> tag as the second child of their <head> tag.
-    --><script async src="https://cdn.ampproject.org/v0.js"></script><!-- A normal HTML title tag--><title>Hello AMP world</title><!--
+    -->
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <!-- A normal HTML title tag-->
+    <title>Hello AMP world</title>
+    <!--
     Points to the regular HTML version of the AMP HTML document or to itself if no such HTML version exists
     Contain a <link rel="canonical" href="$SOME_URL"> tag inside their <head>.
-    --><link rel="canonical" href="http://localhost/Amp_Tutorials/test.html"><!--
+    -->
+    <link rel="canonical" href="http://localhost/Amp_Tutorials/test.html">
+    <!--
     Specifies a responsive viewport.
     Contain a <meta name="viewport" content="width=device-width,minimum-scale=1"> tag inside their <head> tag. It's also recommended to include initial-scale=1.
-    --><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"><!--
+    -->
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <!--
     CSS boilerplate to initially hide the content until AMP JS is loaded
     Contain the AMP boilerplate code in their <head> tag.
-    --><style amp-boilerplate>body {-webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;-moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;-ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;animation: -amp-start 8s steps(1, end) 0s 1 normal both}  @-webkit-keyframes -amp-start { from {visibility: hidden} to {visibility: visible} }  @-moz-keyframes -amp-start { from {visibility: hidden} to {visibility: visible} }  @-ms-keyframes -amp-start { from {visibility: hidden} to {visibility: visible} }  @-o-keyframes -amp-start { from {visibility: hidden} to {visibility: visible} }  @keyframes -amp-start { from {visibility: hidden} to {visibility: visible} }</style><noscript><style amp-boilerplate>body {-webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none}</style></noscript><!--To style elements on your AMP page, add CSS to an inline stylesheet named <style amp-custom> in the <head> of your document--><style amp-custom>amp-img {margin: 0.5em;}  body {max-width: 900px;}</style>
+    -->
+    <style amp-boilerplate>body {-webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;-moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;-ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;animation: -amp-start 8s steps(1, end) 0s 1 normal both}  @-webkit-keyframes -amp-start { from {visibility: hidden} to {visibility: visible} }  @-moz-keyframes -amp-start { from {visibility: hidden} to {visibility: visible} }  @-ms-keyframes -amp-start { from {visibility: hidden} to {visibility: visible} }  @-o-keyframes -amp-start { from {visibility: hidden} to {visibility: visible} }  @keyframes -amp-start { from {visibility: hidden} to {visibility: visible} }</style><noscript><style amp-boilerplate>body {-webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none}</style></noscript><!--To style elements on your AMP page, add CSS to an inline stylesheet named <style amp-custom> in the <head> of your document--><style amp-custom>amp-img {margin: 0.5em;}  body {max-width: 900px;}</style>
+    <!--That's how you add styling to your page by ( style amp-costum )-->
+    <style amp-custom>
+        body {
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Raleway', sans-serif;
+
+        }
+
+        header {
+            background: Tomato;
+            color: white;
+            font-size: 2em;
+            text-align: center;
+        }
+        .home-button {
+            margin-top: 8px;
+        }
+        .headerbar {
+            height: 50px;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .site-name {
+            flex: 1;
+            margin-left: -36px;
+        }
+        article {
+            margin-top: 50px;
+        }
+        h1 {
+            margin: 0;
+            padding: 0.5em;
+            background: white;
+            box-shadow: 0px 3px 5px grey;
+        }
+
+        p {
+            padding: 0.5em;
+            margin: 0.5em;
+        }
+        .hamburger {
+            padding-left: 10px;
+        }
+        .sidebar {
+            padding: 10px;
+            margin: 0;
+        }
+        .sidebar > li {
+            list-style: none;
+            margin-bottom:10px;
+        }
+        .sidebar a {
+            text-decoration: none;
+        }
+        .close-sidebar {
+            font-size: 1.5em;
+            padding-left: 5px;
+        }
+        amp-fit-text {
+            white-space: normal;
+        }
+    </style>
     <!-- this script is required for amp-youtube and must be in the <head> section  -->
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <!--Navigate with a sidebar's script-->
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <!---Adding fonts-->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
+    <!--Adding carousels--->
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <!--Display a Tweet--->
+    <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
+    <!--Highlight an article quote-->
+    <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+
 </head>
 <body>
-<h1>Hello AMP World!</h1>
+<!--The simplest way to get your users to access your website’s regular navigation options is to just funnel them back to your homepage!-->
+<!---<header class="headerbar">
+    <a href="index.html">
+        <amp-img class="home-button" src="icons/home.png" width="36" height="36"></amp-img>
+    </a>
+    <div class="site-name">News Site</div>
+</header>--->
+<!--Navigate with a sidebar-->
+<header class="headerbar">
+    <div role="button" on="tap:sidebar1.toggle" tabindex="0" class="hamburger">☰</div>
+    <div class="site-name">News Site</div>
+</header>
+
+<!--in AMP, we can create such navigation with the amp-sidebar component.-->
+<amp-sidebar id="sidebar1" layout="nodisplay" side="left">
+    <div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="close-sidebar">✕</div>
+    <ul class="sidebar">
+        <li><a href="#">Example 1</a></li>
+        <li><a href="#">Example 2</a></li>
+        <li><a href="#">Example 3</a></li>
+    </ul>
+</amp-sidebar>
+
+<article>
+    <h1>Your page's Name</h1>
+    <!---The amp-ad component allows you to configure ads in several ways, such as the width, height and layout mode with many types-->
+    <amp-ad
+            width="300"
+            height="250"
+            type="a9"
+            data-aax_size="300x250"
+            data-aax_pubname="test123"
+            data-aax_src="302">
+    </amp-ad>
+    <!--The amp-fit-text component allows you to define a fixed width and height element, and a maximum font size-->
+    <amp-fit-text width="400" height="75" layout="responsive" max-font-size="42">
+        And the Raven, never flitting, still is sitting, still is sitting. On the pallid bust of Pallas just above my chamber door; And his eyes have all the seeming of a demon’s that is dreaming, And the lamp-light o’er him streaming throws his shadow on the floor; And my soul from out that shadow that lies floating on the floor. Shall be lifted—nevermore!
+    </amp-fit-text>
+
+
+    <!--The amp-twitter component can provide this functionality with ease.-->
+    <amp-twitter
+            width="486"
+            height="657"
+            layout="responsive"
+            data-tweetid="638793490521001985">
+    </amp-twitter>
+    <!--Simple image carousel-->
+    <!--<amp-carousel layout="fixed-height" height="168" type="carousel" >
+        <amp-img src="../img/mountains-1.jpg" width="300" height="168"></amp-img>
+        <amp-img src="../img/mountains-2.jpg" width="300" height="168"></amp-img>
+        <amp-img src="../img/mountains-3.jpg" width="300" height="168"></amp-img>
+    </amp-carousel>--->
+
+    <!--Simple image responsive slides-->
+    <amp-carousel layout="responsive" width="300" height="168" type="slides" autoplay delay="2000" loop>
+        <amp-img src="../img/mountains-1.jpg" width="300" height="168" layout="responsive"></amp-img>
+        <amp-img src="../img/mountains-2.jpg" width="300" height="168" layout="responsive"></amp-img>
+        <amp-img src="../img/mountains-3.jpg" width="300" height="168" layout="responsive"></amp-img>
+    </amp-carousel>
+
+    <!--Complexe slider-->
+    <amp-carousel layout="fixed-height" height="250" type="carousel" >
+        <amp-img src="../img/blocky-mountains-1.jpg" width="300" height="250"></amp-img>
+
+        <amp-ad width="300" height="250"
+                type="doubleclick"
+                data-slot="/35096353/amptesting/image/static">
+            <div placeholder>This ad is still loading.</div>
+        </amp-ad>
+
+        <amp-fit-text width="300" height="250" layout="fixed">
+            Big, bold article quote goes here.
+        </amp-fit-text>
+    </amp-carousel>
+
+
+
+</article>
 <!--img tag is Replaced with amp-img.Please note: <img> is a Void Element according to HTML5, so it does not have an end tag. However, <amp-img> does have an end tag </amp-img>.-->
 <amp-img src="https://www.ampproject.org/examples/images/amp.jpg" width="900" height="508" layout="responsive"></amp-img>
 <!--Include a youtube video in your page using the amp-youtube element-->
