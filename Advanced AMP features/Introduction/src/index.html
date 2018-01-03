@@ -40,15 +40,14 @@ Contain <head> and <body> tags.
     CSS boilerplate to initially hide the content until AMP JS is loaded
     Contain the AMP boilerplate code in their <head> tag.
     -->
-    <style amp-boilerplate>body {-webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;-moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;-ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;animation: -amp-start 8s steps(1, end) 0s 1 normal both}  @-webkit-keyframes -amp-start { from {visibility: hidden} to {visibility: visible} }  @-moz-keyframes -amp-start { from {visibility: hidden} to {visibility: visible} }  @-ms-keyframes -amp-start { from {visibility: hidden} to {visibility: visible} }  @-o-keyframes -amp-start { from {visibility: hidden} to {visibility: visible} }  @keyframes -amp-start { from {visibility: hidden} to {visibility: visible} }</style><noscript><style amp-boilerplate>body {-webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none}</style></noscript><!--To style elements on your AMP page, add CSS to an inline stylesheet named <style amp-custom> in the <head> of your document--><style amp-custom>amp-img {margin: 0.5em;}  body {max-width: 900px;}</style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <!--That's how you add styling to your page by ( style amp-costum )-->
     <style amp-custom>
-        body {
-            max-width: 100%;
-            margin: 0;
-            padding: 0;
-            font-family: 'Raleway', sans-serif;
 
+        body{
+            margin:0;
+            width:100%;min-height:100%;
+            font-family:"Raleway",sans-serif;
         }
 
         header {
@@ -82,7 +81,11 @@ Contain <head> and <body> tags.
             background: white;
             box-shadow: 0px 3px 5px grey;
         }
-
+        #container {
+            max-width: 900px;
+            padding: 32px 16px 64px 16px;
+            margin: auto;
+        }
         p {
             padding: 0.5em;
             margin: 0.5em;
@@ -108,6 +111,7 @@ Contain <head> and <body> tags.
         amp-fit-text {
             white-space: normal;
         }
+
     </style>
     <!-- this script is required for amp-youtube and must be in the <head> section  -->
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
@@ -146,8 +150,9 @@ Contain <head> and <body> tags.
         <li><a href="#">Example 3</a></li>
     </ul>
 </amp-sidebar>
-
+<div id="container">
 <article>
+    <center>
     <h1>Your page's Name</h1>
     <!---The amp-ad component allows you to configure ads in several ways, such as the width, height and layout mode with many types-->
     <amp-ad
@@ -200,14 +205,16 @@ Contain <head> and <body> tags.
         </amp-fit-text>
     </amp-carousel>
 
-
+        </center>
 
 </article>
+
 <!--img tag is Replaced with amp-img.Please note: <img> is a Void Element according to HTML5, so it does not have an end tag. However, <amp-img> does have an end tag </amp-img>.-->
 <amp-img src="https://www.ampproject.org/examples/images/amp.jpg" width="900" height="508" layout="responsive"></amp-img>
 <!--Include a youtube video in your page using the amp-youtube element-->
 <amp-youtube data-videoid="9Cfxm7cikMY" layout="responsive" width="480" height="270">
 
 </amp-youtube>
+</div>
 </body>
 </html>
