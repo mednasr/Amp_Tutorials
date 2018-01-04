@@ -198,7 +198,7 @@
         }
         amp-sidebar {
             font-size: medium;
-             width:10%;
+            width:10%;
             display: block;
 
         }
@@ -293,7 +293,7 @@
 <amp-sidebar id="sidebar1" layout="nodisplay" side="left">
     <div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="close-sidebar">✕</div>
     <ul class="sidebar">
-       <a class="caps text-decoration-none block p1" href="#">Tshirt </a>
+        <a class="caps text-decoration-none block p1" href="#">Tshirt </a>
         <hr>
         <a class="caps text-decoration-none block p1" href="#">Shorts </a>
         <a class="caps text-decoration-none block p1"  href="#">Pants </a>
@@ -304,64 +304,64 @@
 
 <div id="container">
     <h5 class="title">MEN'S COTTON CREW NECK<br>LONG SLEEVE T-SHIRT</h5>
-        <form id="rating"
-              class="p2"
-              method="post"
-              action-xhr="/samples_templates/rating/set"
-              target="_blank">
-            <fieldset class="rating">
-                <input name="rating"
-                       type="radio"
-                       id="rating5"
-                       value="5"
-                       on="change:rating.submit" />
-                <label for="rating5"
-                       title="5 stars">☆</label>
+    <form id="rating"
+          class="p2"
+          method="post"
+          action-xhr="/samples_templates/rating/set"
+          target="_blank">
+        <fieldset class="rating">
+            <input name="rating"
+                   type="radio"
+                   id="rating5"
+                   value="5"
+                   on="change:rating.submit" />
+            <label for="rating5"
+                   title="5 stars">☆</label>
 
-                <input name="rating"
-                       type="radio"
-                       id="rating4"
-                       value="4"
-                       on="change:rating.submit" />
-                <label for="rating4"
-                       title="4 stars">☆</label>
+            <input name="rating"
+                   type="radio"
+                   id="rating4"
+                   value="4"
+                   on="change:rating.submit" />
+            <label for="rating4"
+                   title="4 stars">☆</label>
 
-                <input name="rating"
-                       type="radio"
-                       id="rating3"
-                       value="3"
-                       on="change:rating.submit" />
-                <label for="rating3"
-                       title="3 stars">☆</label>
+            <input name="rating"
+                   type="radio"
+                   id="rating3"
+                   value="3"
+                   on="change:rating.submit" />
+            <label for="rating3"
+                   title="3 stars">☆</label>
 
-                <input name="rating"
-                       type="radio"
-                       id="rating2"
-                       value="2"
-                       on="change:rating.submit"
-                       checked="checked" />
-                <label for="rating2"
-                       title="2 stars">☆</label>
+            <input name="rating"
+                   type="radio"
+                   id="rating2"
+                   value="2"
+                   on="change:rating.submit"
+                   checked="checked" />
+            <label for="rating2"
+                   title="2 stars">☆</label>
 
-                <input name="rating"
-                       type="radio"
-                       id="rating1"
-                       value="1"
-                       on="change:rating.submit" />
-                <label for="rating1"
-                       title="1 stars">☆</label>
-            </fieldset>
-            <div submit-success>
-                <template type="amp-mustache">
-                    <p>Thanks for rating {{rating}} star(s)!</p>
-                </template>
-            </div>
-            <div submit-error>
-                <template type="amp-mustache">
-                    Looks like something went wrong. Please try to rate again. {{error}}
-                </template>
-            </div>
-        </form>
+            <input name="rating"
+                   type="radio"
+                   id="rating1"
+                   value="1"
+                   on="change:rating.submit" />
+            <label for="rating1"
+                   title="1 stars">☆</label>
+        </fieldset>
+        <div submit-success>
+            <template type="amp-mustache">
+                <p>Thanks for rating {{rating}} star(s)!</p>
+            </template>
+        </div>
+        <div submit-error>
+            <template type="amp-mustache">
+                Looks like something went wrong. Please try to rate again. {{error}}
+            </template>
+        </div>
+    </form>
 
 
 
@@ -477,13 +477,13 @@
         </div>
     </form>
     <p>
-        <center>
+    <center>
         <strong>Call us!</strong>
-</center>
-        <br>
-        <amp-call-tracking config="json/call-tracking-number.json">
-            <a href="tel:10001111111">1 (000) 111-1111</a>
-        </amp-call-tracking>
+    </center>
+    <br>
+    <amp-call-tracking config="json/call-tracking-number.json">
+        <a href="tel:10001111111">1 (000) 111-1111</a>
+    </amp-call-tracking>
     </p>
 </div>
 </body>
