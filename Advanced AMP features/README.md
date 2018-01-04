@@ -5,6 +5,7 @@
   - How to publish AMPs
   - AMP for E-Commerce Getting Started
   - How to support hreflang and internationalization with AMP.
+  - AMP ads vs non AMP ads
 
 
 
