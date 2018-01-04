@@ -202,13 +202,32 @@
             display: block;
 
         }
-        amp-sidebar ul li a
+        amp-sidebar ul  a
         {
             color: #9e9e9e;
-            height: 30px;
-            width: 104px;
-            float: left;
-            padding: 1.2em;
+
+        }
+        hr {
+            box-sizing: content-box;
+            height: 0;
+            overflow: visible
+        }
+        .i-amphtml-element {
+            display: inline-block
+        }
+
+        .caps {
+            text-transform: uppercase;
+            letter-spacing: .2em
+        }
+        .text-decoration-none {
+            text-decoration: none
+        }
+        .block {
+            display: block
+        }
+        .p1 {
+            padding: 1rem
         }
     </style>
 </head>
@@ -278,9 +297,10 @@
 <amp-sidebar id="sidebar1" layout="nodisplay" side="left">
     <div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="close-sidebar">✕</div>
     <ul class="sidebar">
-        <li><a href="#">Tshirt </a></li>
-        <li><a href="#">Shorts </a></li>
-        <li><a href="#">Pants </a></li>
+       <a class="caps text-decoration-none block p1" href="#">Tshirt </a>
+        <hr>
+        <a class="caps text-decoration-none block p1" href="#">Shorts </a>
+        <a class="caps text-decoration-none block p1" href="#">Pants </a>
     </ul>
 </amp-sidebar>
 
