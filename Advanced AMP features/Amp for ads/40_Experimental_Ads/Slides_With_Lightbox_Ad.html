@@ -31,7 +31,7 @@
       .root-container {
         font-family: 'Roboto', sans-serif;
         font-size: 12px;
-        background: #151717 url(<%host%>/img/car-mesh.jpg) center center;
+        background: #151717 url(../img/car-mesh.jpg) center center;
         background-size: cover;
         color: #fff;
         width: 100%;
@@ -314,7 +314,7 @@
             controls>
           <div class="carousel-item selected"
               [class]="'carousel-item ' + (selection == 0 ? 'selected' : '')">
-            <amp-img src="<%host%>/img/car-sideview2.jpg"
+            <amp-img src="../img/car-sideview2.jpg"
                 width="216"
                 height="117"
                 layout="fixed"
@@ -322,7 +322,7 @@
           </div>
           <div class="carousel-item"
               [class]="'carousel-item ' + (selection == 1 ? 'selected' : '')">
-            <amp-img src="<%host%>/img/car-gauges.jpg"
+            <amp-img src="../img/car-gauges.jpg"
                 width="216"
                 height="117"
                 layout="fixed"
@@ -330,7 +330,7 @@
           </div>
           <div class="carousel-item"
               [class]="'carousel-item ' + (selection == 2 ? 'selected' : '')">
-            <amp-img src="<%host%>/img/car-sideview1.jpg"
+            <amp-img src="../img/car-sideview1.jpg"
                 width="216"
                 height="117"
                 layout="fixed"
@@ -344,7 +344,7 @@
       -->
       <div class="footer">
         <div class="stretch">
-          <amp-img src="<%host%>/img/car-logo.png"
+          <amp-img src="../img/car-logo.png"
               width="72"
               height="32"
               layout="fixed"
@@ -369,7 +369,7 @@
     <amp-lightbox id="locator-lightbox" layout="nodisplay">
       <div class="lightbox">
         <div class="lightbox-header">
-          <amp-img src="<%host%>/img/car-logo.png"
+          <amp-img src="../img/car-logo.png"
               width="72"
               height="32"
               layout="fixed"
@@ -379,7 +379,7 @@
         <div class="lightbox-main">
           <!-- Inside the lightbox we set a fixed-size image to serve as a map. We overlay absolute-positioned buttons that display a location detail panel when tapped. In this example all buttons open the same panel, but in practice they can each open a different one. -->
           <div class="lightbox-map">
-            <amp-img src="<%host%>/img/car-map.png"
+            <amp-img src="../img/car-map.png"
                 width="600"
                 height="800"
                 layout="fixed"
@@ -415,7 +415,7 @@
                   role="button"
                   on="tap:locator-store.hide">
               </div>
-              <amp-img src="<%host%>/img/car-store.jpg"
+              <amp-img src="../img/car-store.jpg"
                   width="608"
                   height="342"
                   layout="responsive">
